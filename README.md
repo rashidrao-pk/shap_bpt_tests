@@ -15,6 +15,16 @@ This repo needs be downloaded and merged at the same path which will place the m
 | E6          | MVTec      | VAE-GAN  | Anomaly Detection     | [**_`Pre trained VAE-GAN`_**](/notebooks/E6_XAD/models/hazelnut_VAE_GAN_30000/*)  |
 
 
+
+
+
+$$\alpha \rightarrow \sigma$$
+
+
+<html>
+<h2 style='color:red'> Hello </h2>
+
+</html>
 <!-- 
 # What is included
 
