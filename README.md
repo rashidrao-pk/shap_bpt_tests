@@ -143,10 +143,5 @@ PDF FILES are also provided containing the precomputed results with images for e
 |   ├── saved_explanations
 |   |   |   ├── ----
 |   |   |   ├── ----
-|   |   |   |   ├── train-semi-segmentation
-|   |   |   |   |   ├── n01443537
-|   |   |   |   |   |   ├── ILSVRC2012_val_00004677.png
-|   |   |   |   |   |   ├── ILSVRC2012_val_00048864.png
-|   |   |   |   |   ├── n01491361
-|   |   |   |   |   ├── n12998815
+
  ```
