@@ -21,21 +21,21 @@ This package provided as Supplementary Material for the **_ShapBPT: Image Featur
   <tbody>
     <tr>
       <td>E1</td>
-      <td>ImageNet-S50</td>
+      <td>ImageNet-S<sub>50</sub></td>
       <td>ResNet50</td>
       <td>Common ImageNet setup</td>
       <td>Pretrained</td>
     </tr>
     <tr>
       <td>E2</td>
-      <td>ImageNet-S50</td>
+      <td>ImageNet-S<sub>50</sub></td>
       <td>Ideal</td>
       <td>Controlled setup for exact IoU</td>
       <td>Pretrained</td>
     </tr>
     <tr>
       <td>E3</td>
-      <td>ImageNet-S50</td>
+      <td>ImageNet-S<sub>50</sub></td>
       <td>SwinViT</td>
       <td>Vision Transformer model</td>
       <td>Pretrained</td>
@@ -78,6 +78,19 @@ This package provided as Supplementary Material for the **_ShapBPT: Image Featur
 
 
 
+<h2 style='color:red'> Datasets </h2>
+
+Dataset needed to be downloaded are as belows;
+
+|  Name       | Dataset       | Type                      | Download Link |
+|  :--:       | :--:          |   :--:                    |      :--:      |
+| E1          | ImageNet-S50  | Object Classification     | [**_ImageNet_**](https://www.image-net.org/) - [**_ImageNet-S_**](https://github.com/LUSSeg/ImageNet-S?tab=readme-ov-file#get-part-of-the-imagenet-s-dataset) |
+| E2          | ImageNet-S50  | Object Classification     | [**_ImageNet_**](https://www.image-net.org/) - [**_ImageNet-S_**](https://github.com/LUSSeg/ImageNet-S?tab=readme-ov-file#get-part-of-the-imagenet-s-dataset) | 
+| E3          | ImageNet-S50  | Object Classification     | [**_ImageNet_**](https://www.image-net.org/) - [**_ImageNet-S_50_**](https://github.com/LUSSeg/ImageNet-S?tab=readme-ov-file#get-part-of-the-imagenet-s-dataset) |
+| E4          | MS-COCO       | Multi Object Detection    | [**_MS-COCO SITE_**](https://cocodataset.org/#download) |
+| E5          | CelebA        | Facial Features           | [**_CelebAMask-HQ_**](https://github.com/switchablenorms/CelebAMask-HQ) |  
+| E6          | MVTec         | Visual Anomaly Detection  | [**_MVtec Link_**](https://www.mvtec.com/company/research/datasets/mvtec-ad) |
+| E7          | ImageNet-S50  | Object Classification     | [**_ImageNet_**](https://www.image-net.org/) - [**_ImageNet-S_**](https://github.com/LUSSeg/ImageNet-S?tab=readme-ov-file#get-part-of-the-imagenet-s-dataset) |
 
 
 ### structure
