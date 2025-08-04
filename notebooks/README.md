@@ -1,6 +1,6 @@
-# Shapley image explanations with data-aware Binary Partition Trees
+# ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees
 
-This package provided as Supplementary Material for the **_Shapley image explanations with data-aware Binary Partition Trees_** implementation of novel eXplainable AI (**_XAI_**) method **`ShapBPT`**.
+This package provided as Supplementary Material for the **_ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees_** implementation of novel eXplainable AI (**_XAI_**) method **`ShapBPT`**.
 
 
 This folder consists on models which needs to be downloaded and merged to load the models being used.
