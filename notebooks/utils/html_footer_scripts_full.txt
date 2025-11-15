@@ -1,0 +1,16 @@
+
+            <script>const toggleAllButton = document.getElementById('toggleAllButton');
+                const collapsibleContents = document.querySelectorAll('.collapsible-content');
+                toggleAllButton.addEventListener('click', () => {
+                  collapsibleContents.forEach(content => {
+                    if (content.style.display === 'none') {
+                      content.style.display = 'block';
+                      content.previousElementSibling.querySelector('.toggle-icon').textContent = '';
+                    } else {
+                      content.style.display = 'none';
+                      content.previousElementSibling.querySelector('.toggle-icon').textContent = '';
+                    }
+                  });
+                });
+            </script>
+            

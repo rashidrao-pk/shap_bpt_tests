@@ -1,0 +1,39 @@
+numpy
+datetime
+tqdm
+lime
+shap
+json5
+scipy
+cython
+pandas==2.2.1
+pickle-mixin
+grad-cam
+latex
+matplotlib
+torchvision
+torch
+scikit-image
+scikit-learn
+opencv-python
+jupyter
+chardet
+timm
+captum
+pynvml
+chime
+#################
+einops
+# for Celeb-A
+#################
+# # for AD
+tensorflow
+tensorflow-addons
+#################
+# for MS COCO
+ultralytics
+pycocotools
+
+
+
+
