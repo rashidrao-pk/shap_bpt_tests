@@ -1,6 +1,6 @@
 <!-- Logo + Title -->
 <p align="center">
-  <img src="docs/imgs/logo_shapbpt.png" alt="ShapBPT logo" width="260">
+  <img src="docs/imgs/logo_shapbpt.png" alt="ShapBPT logo" width="150">
 </p>
 
 <h1 align="center">ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees</h1>
