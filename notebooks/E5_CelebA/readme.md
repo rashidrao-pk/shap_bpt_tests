@@ -1,61 +1,285 @@
-# Shapley image explanations with data-aware Binary Partition Trees
+# ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees  
+### Supplementary Material – Facial Attribute Localization (Experiment E5)
 
-## Experiments on Facial Attributes Localization - E5
-New Experiments E5, presented in supplementry materials
+This directory contains all supplementary resources for **Experiment E5** from the paper:
 
-## Dataset:    
- - Dataset `CelebAMask-HQ` needs to be downloaded from [https://github.com/switchablenorms/CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ).
+> **_ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees_**
 
-# Model Setting:
+Experiment E5 focuses on **facial attribute localization** using the **CelebAMask-HQ dataset**, evaluating ShapBPT against several popular XAI baselines.  
+It includes models, notebooks, CSV results, saliency heatmaps, IoU comparisons, and full ablation studies using multiple background replacement strategies.
 
-1. Model with trained weights needed to download is provided by `kartikbatra` and publicaly [available here](https://www.kaggle.com/code/kartikbatra/multilabelclassification/notebook).
-2. Make sure to download it and place it at [/models/model.pth](/models/model.pth)
+---
 
-# Folder Structure
+# 📚 Dataset
 
-1. Main folder `CelebA_experiments` contains notebooks and results folder.
+The CelebA experiments use:
 
-2. Results folder contains further following folders:
-    - Folders:
-        - csv: folder contains [csv files](results/csv/) which are computed by Notebook: [`notebooks/CelebA_experiments/N1_Run_experiments_CelebA.ipynb`](`notebooks/CelebA_experiments/2_Run_experiments_CelebA.ipynb`) using different background replacement setup.
-        - boxplots :   this folder contains pre-computed results presented in paper as `Figure 14`.
-        - selected: This folder will contain the partial results used to generate the `Figure 13` of the paper.
-    - Files: HTML-Files reporting visual analysis of computed explanations by various XAI methods.
+### **CelebAMask-HQ**
+Download from the official repository:  
+https://github.com/switchablenorms/CelebAMask-HQ
 
-## Notebooks 
-Notebooks are available at `notebooks/CelebA_experiments/`
+After downloading, place the dataset inside the appropriate folder structure expected by the notebooks (typically under `notebooks/CelebA_experiments/`).
 
-### Compute Explanations and CSV Files:
-1. To run single selected examples, run [`notebooks/CelebA_experiments/N1_Run_experiments_CelebA.ipynb`](`notebooks/CelebA_experiments/2_Run_experiments_CelebA.ipynb`).
-2. To run full test set for a specific background replacement values, select `background_type` first using `Cell#32`, and also by flipping the boolean variable `run_full_test` from `Cell#56` of [`notebooks/CelebA_experiments/N1_Run_experiments_CelebA.ipynb`](`notebooks/CelebA_experiments/2_Run_experiments_CelebA.ipynb`)
-3. To run full ablation analysis on CelebA dataset using multiple background replacement values, flip boolean variable `run_ablation_analysis` in `Cell#59` & run `Cell#60` which will take almost 10 hours and will compute explanations and csv for all the background replacement values (i.e 'black' , 'white' , 'gray' , 'noise'  , 'full', 'blurred').
+---
 
-### Compute Results from Computed CSV and explanations:
-1. To draw boxplots presented in supplementry material figures using [CSV files](results/csv/), run [`notebooks/CelebA_experiments/N2_DrawPlot_from_CSV.ipynb`](`notebooks/CelebA_experiments/N3_DrawPlot_from_CSV.ipynb`) by selecting the specific `background replacement value` in `Cell#7` and it will save the generated Boxplot at [Boxlpts Folder](results/boxplots/). (i.e. [Boxplot usiing blurred bg](results/boxplots/results_table_IoU_110_10_blurred.pdf))
+# 🧠 Model Setup
 
-3. All computed heatmap expalanations and IoU plots are combined togather as to generate HTML files to perform visual analysis run [`notebooks/CelebA_experiments/N3_Create_HTML_File.ipynb`](`notebooks/CelebA_experiments/N3_DrawPlot_from_CSV.ipynb`) which will generate [HTML Files for heatmaps](results/HTML_CelebA_blurred.html) & [HTML Files for IoU](results/HTML_CelebA_blurred_IoU.html) by loading the computed expalantions [`heatmaps~`](results/bg_blurred/) and by loading computed [CSV files](results/csv/csv_expIoU_face_116_10_blurred.csv).
+The facial attribute classifier used in this experiment is publicly provided by **@kartikbatra**.
 
+### **1. Download the Pretrained Model**
+Model link:  
+https://www.kaggle.com/code/kartikbatra/multilabelclassification/notebook
 
+### **2. Place the Model File**
+Download the trained weights file and place it as:
 
-## Example:
+```
+models/model.pth
+```
+
+This is required for running the notebooks.
+
+---
+
+# 📁 Folder Structure
+
+The main experiment folder is:
+
+```
+CelebA_experiments/
+```
+
+It contains the following components:
+
+---
+
+## **1. Notebooks – `notebooks/CelebA_experiments/`**
+
+This directory contains 3 primary notebooks:
+
+### **a. N1_Run_experiments_CelebA.ipynb**
+Generates:
+- heatmaps  
+- IoU maps  
+- saliency evaluations  
+- CSV results  
+
+Supports:
+- single-image explanations  
+- full test set evaluation  
+- ablation analysis across background types
+
+---
+
+### **b. N2_DrawPlot_from_CSV.ipynb**
+Used to generate **boxplots** (Figure 14 in the paper):
+
+- Loads CSV files  
+- Computes AUC / IoU distributions  
+- Saves visualizations inside `results/boxplots/`  
+
+Example output:  
+`results/boxplots/results_table_IoU_110_10_blurred.pdf`
+
+---
+
+### **c. N3_Create_HTML_File.ipynb**
+Generates complete **HTML visual reports**, containing:
+
+- combined heatmaps  
+- per-method IoU curves  
+- comparative saliency evaluation
+
+Example outputs:
+
+- `results/HTML_CelebA_blurred.html`  
+- `results/HTML_CelebA_blurred_IoU.html`  
+
+---
+
+## **2. Results Folder – `results/`**
+
+The results folder contains multiple subfolders:
+
+### **`csv/`**
+Contains per-image CSV files, generated by `N1_Run_experiments_CelebA.ipynb`, such as:
+- IoU scores  
+- AUC curves  
+- MSE curves  
+- saliency pixel statistics  
+
+Each CSV corresponds to a specific:
+- image  
+- attribute  
+- background replacement type  
+
+---
+
+### **`boxplots/`**
+Contains precomputed boxplots for the paper (e.g., Figure 14).  
+
+Each plot shows comparisons across:
+- ShapBPT  
+- AxisAligned SHAP  
+- Gradient-based methods  
+- LIME  
+- IDG  
+- GradSHAP  
+- etc.
+
+---
+
+### **`selected/`**
+This folder stores selected outputs used to produce **Figure 13** in the supplementary materials.
+
+Contains:
+- representative heatmaps  
+- IoU maps  
+- per-attribute comparisons  
+
+---
+
+### **HTML Files**
+All visual analysis HTML files are saved here after running:
+
+```
+N3_Create_HTML_File.ipynb
+```
+
+---
+
+# 📝 Notebook Usage Instructions
+
+## **1. Run Single Example**
+
+Use:
+
+```
+notebooks/CelebA_experiments/N1_Run_experiments_CelebA.ipynb
+```
+
+This computes:
+- heatmaps  
+- IoU  
+- saliency curves  
+- CSV metrics  
+
+for a manually selected image.
+
+---
+
+## **2. Run Full Test Set**
+
+In the same notebook:
+
+- Set `background_type` in **Cell #32**
+- Set:
+
+```
+run_full_test = True
+```
+
+in **Cell #56**
+
+This processes **the entire CelebA-HQ validation set** for the selected background value:
+
+Supported backgrounds:
+```
+'black', 'white', 'gray', 'noise', 'full', 'blurred'
+```
+
+---
+
+## **3. Run Full Ablation Analysis**
+
+Enable:
+
+```
+run_ablation_analysis = True
+```
+
+in **Cell #59**, then run **Cell #60**.
+
+This evaluates *all background types* and computes:
+
+- all saliency maps  
+- IoU maps  
+- CSV summaries  
+- evaluation metrics  
+
+⏳ **Expected runtime**: ~10 hours.
+
+---
+
+## **4. Generate Boxplots from CSV Files**
+
+Use:
+
+```
+notebooks/CelebA_experiments/N2_DrawPlot_from_CSV.ipynb
+```
+
+Select your background type in **Cell #7**.  
+This will generate all boxplots and save them into:
+
+```
+results/boxplots/
+```
+
+---
+
+## **5. Generate HTML Summary Reports**
+
+Use:
+
+```
+notebooks/CelebA_experiments/N3_Create_HTML_File.ipynb
+```
+
+It loads:
+
+- computed heatmaps from `results/bg_<type>/`  
+- CSV files from `results/csv/`  
+
+and outputs:
+
+- `HTML_CelebA_<bg>.html`  
+- `HTML_CelebA_<bg>_IoU.html`
+
+---
+
+# 🖼️ Example Output (Single Image)
+
+Below is an example result for the **Brown Hair** attribute using **gray background replacement**.
+
+### 🔹 Combined Heatmaps (All Methods)
+
 <div>
     <table>
     <tr>
-    <td style="text-align: center;"> Input</td>
-    <td style="text-align: center;"> GroundTruth</td>
-    <td style="text-align: center;"> BPT-100</td>
-    <td style="text-align: center;"> BPT-500</td>
-    <td style="text-align: center;"> BPT-1000</td>
-    <td style="text-align: center;"> AA-100</td>
-    <td style="text-align: center;"> AA-500</td>
-    <td style="text-align: center;"> AA-1000</td>
-    <td style="text-align: center;"> LIME-50</td>
-    <td style="text-align: center;"> LIME-100</td>
-    <td style="text-align: center;"> LIME-200</td>
-    <td style="text-align: center;"> GradShap</td>
-<tr>
-    <td colspan="12"><img src='results/bg_gray/0_Black_Hair_gray_heatmaps.png'></td>
-<tr colspan="12">
-<td colspan="12"><img src='results/bg_gray/0_Black_Hair_gray_iou.png'></td>
-</table>
-<div>
+        <td style="text-align: center;">Input</td>
+        <td style="text-align: center;">GT</td>
+        <td style="text-align: center;">BPT-100</td>
+        <td style="text-align: center;">BPT-500</td>
+        <td style="text-align: center;">BPT-1000</td>
+        <td style="text-align: center;">AA-100</td>
+        <td style="text-align: center;">AA-500</td>
+        <td style="text-align: center;">AA-1000</td>
+        <td style="text-align: center;">LIME-50</td>
+        <td style="text-align: center;">LIME-100</td>
+        <td style="text-align: center;">LIME-200</td>
+        <td style="text-align: center;">LRP</td>
+        <td style="text-align: center;">GradCAM</td>
+        <td style="text-align: center;">IDG</td>
+        <td style="text-align: center;">GradExp</td>
+        <td style="text-align: center;">GradShap</td>
+    </tr>
+    <tr>
+        <td colspan="16"><img src='results/bg_gray/0_Brown_Hair_gray_heatmaps.png' width=100%></td>
+    </tr>
+    <tr>
+        <td colspan="16"><img src='results/bg_gray/0_Brown_Hair_gray_iou.png'></td>
+    </tr>
+    </table>
+</div>
+ 
