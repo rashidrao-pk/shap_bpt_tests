@@ -35,5 +35,11 @@ ultralytics
 pycocotools
 
 
+###################
+# for human study
+scikit-posthocs
+
+
+
 
 
