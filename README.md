@@ -19,22 +19,13 @@
       <a href="https://github.com/rashidrao-pk/">
         <img src="https://img.shields.io/github/commit-activity/t/rashidrao-pk/shap_bpt_tests" alt="GitHub commit activity (branch)">
       </a>
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/issues?q=is%3Aissue+is%3Aclosed">
+<!-- <a href="https://github.com/rashidrao-pk/shap_bpt_tests/issues?q=is%3Aissue+is%3Aclosed">
 <img src="https://img.shields.io/github/issues-closed/rashidrao-pk/shap_bpt_tests" alt="GitHub closed issues">
-</a>
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/issues">
-<img src="https://img.shields.io/github/issues/rashidrao-pk/shap_bpt_tests" alt="GitHub issues">
-</a>
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/pulls?q=is%3Apr+is%3Aclosed">
-<img src="https://img.shields.io/github/issues-pr-closed/rashidrao-pk/shap_bpt_tests" alt="GitHub closed pull requests">
-</a>
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/pulls">
-<img src="https://img.shields.io/github/issues-pr/rashidrao-pk/shap_bpt_tests" alt="GitHub pull requests">
-</a>
+</a> -->
 <img src="https://img.shields.io/github/last-commit/rashidrao-pk/shap_bpt_tests" alt="GitHub last commit">
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/watchers">
+<!-- <a href="https://github.com/rashidrao-pk/shap_bpt_tests/watchers">
 <img src="https://img.shields.io/github/watchers/rashidrao-pk/shap_bpt_tests?style=flat" alt="GitHub watchers">
-</a>
+</a> -->
 <a href="https://github.com/rashidrao-pk/shap_bpt_tests/forks">
 <img src="https://img.shields.io/github/forks/rashidrao-pk/shap_bpt_tests?style=flat" alt="GitHub forks">
 </a>
