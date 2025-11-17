@@ -9,8 +9,61 @@
   <b>AAAI-2026 (40th AAAI Conference on Artificial Intelligence), Singapore</b><br>
 </p>
 
----
 
+
+<img src="https://img.shields.io/badge/version-v0.0.0-rc0" alt="Version">
+      <a href ="https://github.com/rashidrao-pk/shap_bpt_tests/blob/main/LICENSE">
+        <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
+      </a>
+<a href="https://github.com/rashidrao-pk/">
+<img src="https://img.shields.io/github/contributors/rashidrao-pk/shap_bpt_tests" alt="GitHub contributors">
+</a>
+<img src="https://img.shields.io/github/repo-size/rashidrao-pk/shap_bpt_tests" alt="GitHub repo size">
+      <a href="https://github.com/rashidrao-pk/">
+        <img src="https://img.shields.io/github/commit-activity/t/rashidrao-pk/shap_bpt_tests" alt="GitHub commit activity (branch)">
+      </a>
+
+
+<a href="https://github.com/rashidrao-pk/shap_bpt_tests/graphs/contributors">
+<img src="https://img.shields.io/github/contributors/rashidrao-pk/shap_bpt_tests" alt="GitHub contributors">
+</a>
+<a href="https://github.com/rashidrao-pk/shap_bpt_tests/issues?q=is%3Aissue+is%3Aclosed">
+<img src="https://img.shields.io/github/issues-closed/rashidrao-pk/shap_bpt_tests" alt="GitHub closed issues">
+</a>
+<a href="https://github.com/rashidrao-pk/shap_bpt_tests/issues">
+<img src="https://img.shields.io/github/issues/rashidrao-pk/shap_bpt_tests" alt="GitHub issues">
+</a>
+<a href="https://github.com/rashidrao-pk/shap_bpt_tests/pulls?q=is%3Apr+is%3Aclosed">
+<img src="https://img.shields.io/github/issues-pr-closed/rashidrao-pk/shap_bpt_tests" alt="GitHub closed pull requests">
+</a>
+<a href="https://github.com/rashidrao-pk/shap_bpt_tests/pulls">
+<img src="https://img.shields.io/github/issues-pr/rashidrao-pk/shap_bpt_tests" alt="GitHub pull requests">
+</a>
+
+<img src="https://img.shields.io/github/last-commit/rashidrao-pk/shap_bpt_tests" alt="GitHub last commit">
+<a href="https://github.com/rashidrao-pk/shap_bpt_tests/watchers">
+<img src="https://img.shields.io/github/watchers/rashidrao-pk/shap_bpt_tests?style=flat" alt="GitHub watchers">
+</a>
+<a href="https://github.com/rashidrao-pk/shap_bpt_tests/forks">
+<img src="https://img.shields.io/github/forks/rashidrao-pk/shap_bpt_tests?style=flat" alt="GitHub forks">
+</a>
+<a href="https://github.com/rashidrao-pk/shap_bpt_tests/stargazers">
+<img src="https://img.shields.io/github/stars/rashidrao-pk/shap_bpt_tests?style=flat" alt="GitHub Repo stars">
+</a>
+<img src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Frashidrao-pk&label=Visitors&countColor=%23263759&style=flat" alt="Visitors">
+
+
+## 🎉 ShapBPT Experiments — v1.0 (AAAI-26 Paper Release)
+
+## Availability
+ShapBPT Package: 
+Technical Appendix: 
+
+- Code — https://github.com/amparore/shap_bpt
+- Tests — https://github.com/rashidrao-pk/shap_bpt_tests
+- Tech. Appendix — https://zenodo.org/records/17570695
+
+---
 ## 🔍 Overview
 
 This repository contains the **experiments, notebooks, and precomputed results** for the paper:
@@ -171,6 +224,37 @@ shap_bpt.plot_owen_values(explainer, shap_values_bpt, class_names)
 
 ---
 
+
+## 2. Figure-to-Notebook Mapping
+
+### ✅ 2.1 Main Paper
+
+| Paper Figure | What it Shows                           | Notebook Path                                     |
+| ------------ | --------------------------------------- | ------------------------------------------------- |
+| **Fig. 1**   | Overview + comparison example           | `notebooks/N1_Fig1_and_Fig3.ipynb`                |
+| **Fig. 2**   | BPT partitioning visualization          | *Generated from core library demos*               |
+| **Fig. 3**   | Qualitative examples (ResNet/Swin/ViT)  | `notebooks/N1_Fig1_and_Fig3.ipynb`                |
+| **Fig. 4**   | IoU comparison (AA vs BPT)              | `E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb` |
+| **Fig. 5**   | Quantitative Analysis           | `notebook/N2_summary_plots.ipynb`                    |
+---
+### ✅ 2.2 Technical Appendix
+---
+| Paper Figure | What it Shows                           | Notebook Path                                     |
+| ------------ | --------------------------------------- | ------------------------------------------------- |
+| **Fig. 6,Fig. 9,Fig. 10, & Fig. 19**   | Extended heatmaps for Exp E1,E2,E2 & E7                    | `notebook/E1_E2_E3_E7/N1_1_Run_experiments_testing.ipynb` |
+| **Fig. 7,Fig.8, Fig.11  & Fig. 20**   | Results on all images for Exp E1,E2,E2 & E7 | `notebook/E1_E2_E3_E7/N2_1_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb`                       |
+| **Fig. 12**   | Extended heatmaps for Exp. E4 (Object Detection on MS COCO) | `E4_MS_COCO/N1_MS_COCO_testing.ipynb.ipynb`                       |
+| **Fig. 13**   | Results on all images | `E4_MS_COCO/N2_DrawPlot_from_CSV.ipynb`                       |
+| **Fig. 14**   | Extended heatmaps for Exp. E5 (Facial Attributes Recongnition on  CelebA dataset) | `E5_CelebA/N1_Run_experiments_CelebA.ipynb`                       |
+| **Fig. 15**   | Results for Exp. E5 (Facial Attributes Recongnition on  CelebA dataset) | `E5_CelebA/N2_DrawPlot_from_CSV.ipynb`                       |
+| **Fig. 16**   | Framework for Anomaly Detection | using drawing tool                       |
+| **Fig. 17**   | Extended heatmaps Anomaly detection explanations (using VAE-GAN on MVTec dataset)  | `E6_XAD/N1_XAD_HAZELNUT.ipynb`                       |
+| **Fig. 18**   | Results on all images  | `E6_XAD/N2_DrawPlot_from_CSV.ipynb`                       |
+| **Fig. 21**   | Human study — Explanations  | -                   |
+| **Fig. 22**   | Human study — ranking of explanations   | `E8_human_study/HumanStudyResults.ipynb`                   |
+| **Table 2**   | Annova Analysis   | `notebooks/N2_summary_plots.ipynb`                   |
+
+
 ## 🔁 4. Reproduce Paper Results
 
 ### 4.1 Quick (few minutes)
@@ -244,6 +328,16 @@ Runtimes (approx):
 └── README.md
 ```
 
+### Authors ✍️
+
+| Sr. No. | Author Name | Affiliation | Google Scholar | 
+| :--:    | :--:        | :--:        | :--:           | 
+| 1. | Muhammad Rashid | University of Torino, Computer Science Department, C.so Svizzera 185, 10149 Torino, Italy | [Muhammad Rashid](https://scholar.google.com/citations?user=F5u_Z5MAAAAJ&hl=en) | 
+| 2. | Elvio G. Amparore | University of Torino, Computer Science Department, C.so Svizzera 185, 10149 Torino, Italy | [Elvio G. Amparore](https://scholar.google.com/citations?user=Hivlp1kAAAAJ&hl=en&oi=ao) | 
+| 3. | Enrico Ferrari | Rulex Innovation Labs, Rulex Inc., Via Felice Romani 9, 16122 Genova, Italy | [Enrico Ferrari](https://scholar.google.com/citations?user=QOflGNIAAAAJ&hl=en&oi=ao) | 
+| 4. | Damiano Verda | Rulex Innovation Labs, Rulex Inc., Via Felice Romani 9, 16122 Genova, Italy | [Damiano Verda](https://scholar.google.com/citations?user=t6o9YSsAAAAJ&hl=en&oi=ao) |
+
+
 ---
 
 ## 📑 Citation
@@ -256,14 +350,27 @@ Runtimes (approx):
   year={2026}
 }
 ```
+### Keywords 🔍
+Explainable AI · XAI · Computer Vision · Object Localization
 
----
+### Copyright Notice:
+MIT license
+Author: Muhammad Rashid (muhammad.rashid@unito.it)
+University of Turin, Italy.
 
-## 👤 Author
+## Funding
+This work has received funding from the European Union’s Horizon research and innovation program Chips JU under Grant Agreement No. 101139769, **_DistriMuSe project_** (HORIZON-KDT-JU-2023-2-RIA). The JU receives support from the European Union’s Horizon research and innovation programme and the nations involved in the mentioned projects. The work reflects only the authors’ views; the European Commission is not responsible for any use that maybe made of the information it contains.
 
-**Muhammad Rashid**  
-University of Turin × Rulex Labs × UniGranada  
-LinkedIn: https://www.linkedin.com/in/rashid-rao-cuipakistan/
+## Contributors
 
----
+<a href="https://github.com/rashidrao-pk/shap_bpt_tests/graphs/contributors">
+  <img src="http://contributors.nn.ci/api?repo=rashidrao-pk/shap_bpt_tests" alt="" />
+</a>
+<br>
+
+> [!NOTE]
+> Contributions to improve the completeness of this list are greatly appreciated. If you come across any overlooked papers, please **feel free to [*create pull requests*](https://github.com/rashidrao-pk/shap_bpt_tests/pulls), [*open issues*](https://github.com/rashidrao-pk/shap_bpt_tests/issues) or contact me via [*email*](mailto:muhammad.rashid@unito.it)**. Your participation is crucial to making this repository even better.
+
+
+
 
