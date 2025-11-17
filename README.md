@@ -10,23 +10,15 @@
 </p>
 
 
-
 <img src="https://img.shields.io/badge/version-v0.0.0-rc0" alt="Version">
       <a href ="https://github.com/rashidrao-pk/shap_bpt_tests/blob/main/LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
-      </a>
-<a href="https://github.com/rashidrao-pk/">
+      </a> <a href="https://github.com/rashidrao-pk/">
 <img src="https://img.shields.io/github/contributors/rashidrao-pk/shap_bpt_tests" alt="GitHub contributors">
-</a>
-<img src="https://img.shields.io/github/repo-size/rashidrao-pk/shap_bpt_tests" alt="GitHub repo size">
+</a> <img src="https://img.shields.io/github/repo-size/rashidrao-pk/shap_bpt_tests" alt="GitHub repo size">
       <a href="https://github.com/rashidrao-pk/">
         <img src="https://img.shields.io/github/commit-activity/t/rashidrao-pk/shap_bpt_tests" alt="GitHub commit activity (branch)">
       </a>
-
-
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/graphs/contributors">
-<img src="https://img.shields.io/github/contributors/rashidrao-pk/shap_bpt_tests" alt="GitHub contributors">
-</a>
 <a href="https://github.com/rashidrao-pk/shap_bpt_tests/issues?q=is%3Aissue+is%3Aclosed">
 <img src="https://img.shields.io/github/issues-closed/rashidrao-pk/shap_bpt_tests" alt="GitHub closed issues">
 </a>
@@ -39,7 +31,6 @@
 <a href="https://github.com/rashidrao-pk/shap_bpt_tests/pulls">
 <img src="https://img.shields.io/github/issues-pr/rashidrao-pk/shap_bpt_tests" alt="GitHub pull requests">
 </a>
-
 <img src="https://img.shields.io/github/last-commit/rashidrao-pk/shap_bpt_tests" alt="GitHub last commit">
 <a href="https://github.com/rashidrao-pk/shap_bpt_tests/watchers">
 <img src="https://img.shields.io/github/watchers/rashidrao-pk/shap_bpt_tests?style=flat" alt="GitHub watchers">
@@ -225,9 +216,9 @@ shap_bpt.plot_owen_values(explainer, shap_values_bpt, class_names)
 ---
 
 
-## 2. Figure-to-Notebook Mapping
+## 4. Figure-to-Notebook Mapping
 
-### ✅ 2.1 Main Paper
+### ✅ 4.1 Main Paper
 
 | Paper Figure | What it Shows                           | Notebook Path                                     |
 | ------------ | --------------------------------------- | ------------------------------------------------- |
@@ -237,7 +228,7 @@ shap_bpt.plot_owen_values(explainer, shap_values_bpt, class_names)
 | **Fig. 4**   | IoU comparison (AA vs BPT)              | `E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb` |
 | **Fig. 5**   | Quantitative Analysis           | `notebook/N2_summary_plots.ipynb`                    |
 ---
-### ✅ 2.2 Technical Appendix
+### ✅ 4.2 Technical Appendix ([available here](https://zenodo.org/records/17570695))
 ---
 | Paper Figure | What it Shows                           | Notebook Path                                     |
 | ------------ | --------------------------------------- | ------------------------------------------------- |
@@ -255,9 +246,9 @@ shap_bpt.plot_owen_values(explainer, shap_values_bpt, class_names)
 | **Table 2**   | Annova Analysis   | `notebooks/N2_summary_plots.ipynb`                   |
 
 
-## 🔁 4. Reproduce Paper Results
+## 🔁 5. Reproduce Paper Results
 
-### 4.1 Quick (few minutes)
+### 5.1 Quick (few minutes)
 
 - Run:
 
@@ -273,7 +264,7 @@ notebooks/E1_E2_E3_E7/N2_DrawPlotFig4_Fig6_from_CSV.ipynb
 
 ---
 
-### 4.2 Full replication (long)
+### 5.2 Full replication (long)
 
 Run:
 

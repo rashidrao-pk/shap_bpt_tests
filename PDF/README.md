@@ -1,6 +1,9 @@
 # ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees
 
-This package provided as Supplementary Material for the **_ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees_** implementation of novel eXplainable AI (**_XAI_**) method **`ShapBPT`**.
+This repository contains the **experiments, notebooks, and precomputed results** for the paper:
+
+> **ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees**  
+> A novel eXplainable AI (XAI) method for image feature attribution based on data-aware binary partition trees.
 
 
 ## Experiments Details:
