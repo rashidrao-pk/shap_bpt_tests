@@ -35,7 +35,7 @@
 <img src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Frashidrao-pk&label=Visitors&countColor=%23263759&style=flat" alt="Visitors">
 
 
-## 🎉 ShapBPT Experiments — v1.0 (AAAI-26 Paper Release)
+## 🎉 ShapBPT Experiments — v1.0 ([AAAI-26](https://aaai.org/conference/aaai/aaai-26/) Paper Release)
 
 ## Availability
 ShapBPT Package: 
@@ -139,7 +139,7 @@ notebooks/datasets/
 
 ---
 
-## 🚀 2. Minimal Example (ShapBPT)
+<!-- ## 🚀 2. Minimal Example (ShapBPT)
 
 ```python
 import shap_bpt
@@ -176,23 +176,23 @@ shap_values_aa = explainer.explain_instance(
 ```
 
 ```python
-# PLOT FEATURE ATTRIBUTION --> AA
-shap_bpt.plot_owen_values(explainer, shap_values_aa, class_names)
+# PLOT FEATURE ATTRIBUTION -->
+<!-- shap_bpt.plot_owen_values(explainer, shap_values_aa, class_names)
 ```
 
 
 <center><img src="docs/aa_plot.svg"></center>
 
 ```python
-# PLOT FEATURE ATTRIBUTION --> BPT
-shap_bpt.plot_owen_values(explainer, shap_values_bpt, class_names)
-```
-<center><img src="docs/bpt_plot.svg"></center>
-
+# PLOT FEATURE ATTRIBUTION -->
+<!-- shap_bpt.plot_owen_values(explainer, shap_values_bpt, class_names) -->
+<!-- ``` -->
+<!-- <center><img src="docs/bpt_plot.svg"></center> -->
+ <!-- -->
 
 ---
 
-## 📊 3. Precomputed Results
+## 📊 2. Precomputed Results
 
 | Exp | Dataset | Model | PDF | CSV |
 |:---:|:--------|:------|:-----|:-----|
@@ -207,9 +207,9 @@ shap_bpt.plot_owen_values(explainer, shap_values_bpt, class_names)
 ---
 
 
-## 4. Figure-to-Notebook Mapping
+## 3. Figure-to-Notebook Mapping
 
-### ✅ 4.1 Main Paper
+### ✅ 3.1 Main Paper
 
 | Paper Figure | What it Shows                           | Notebook Path                                     |
 | ------------ | --------------------------------------- | ------------------------------------------------- |
@@ -219,7 +219,7 @@ shap_bpt.plot_owen_values(explainer, shap_values_bpt, class_names)
 | **Fig. 4**   | IoU comparison (AA vs BPT)              | `E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb` |
 | **Fig. 5**   | Quantitative Analysis           | `notebook/N2_summary_plots.ipynb`                    |
 ---
-### ✅ 4.2 Technical Appendix ([available here](https://zenodo.org/records/17570695))
+### ✅ 3.2 Technical Appendix ([available here](https://zenodo.org/records/17570695))
 ---
 | Paper Figure | What it Shows                           | Notebook Path                                     |
 | ------------ | --------------------------------------- | ------------------------------------------------- |
@@ -237,9 +237,9 @@ shap_bpt.plot_owen_values(explainer, shap_values_bpt, class_names)
 | **Table 2**   | Annova Analysis   | `notebooks/N2_summary_plots.ipynb`                   |
 
 
-## 🔁 5. Reproduce Paper Results
+## 🔁 4. Reproduce Paper Results
 
-### 5.1 Quick (few minutes)
+### 4.1 Quick (few minutes)
 
 - Run:
 
@@ -255,7 +255,7 @@ notebooks/E1_E2_E3_E7/N2_DrawPlotFig4_Fig6_from_CSV.ipynb
 
 ---
 
-### 5.2 Full replication (long)
+### 4.2 Full replication (long)
 
 Run:
 
@@ -322,7 +322,7 @@ Runtimes (approx):
 
 ---
 
-## 📑 Citation
+<!-- ## 📑 Citation
 
 ```
 @inproceedings{Rashid2026ShapBPT,
@@ -331,7 +331,7 @@ Runtimes (approx):
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   year={2026}
 }
-```
+``` -->
 ### Keywords 🔍
 Explainable AI · XAI · Computer Vision · Object Localization
 
