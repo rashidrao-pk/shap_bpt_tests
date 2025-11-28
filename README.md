@@ -33,22 +33,25 @@ Technical Appendix:
 - Tech. Appendix — **_https://zenodo.org/records/17570695_**
 
 ---
-## 🔍 Overview
-
-This repository contains the **experiments, notebooks, and precomputed results** for the paper:
+**Experiments repository for the paper**
 
 > **ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees**  
-> A novel eXplainable AI (XAI) method for image feature attribution based on data-aware binary partition trees.
+> Accepted at **AAAI-26 (40th AAAI Conference on Artificial Intelligence), Singapore**  
 
-This repo provides:
+---
 
-- All **experiments E1–E7** from the paper  
-- **Notebooks** for quick and full replication  
-- **Precomputed results (PDFs & CSVs)**  
-- Ready-to-run ShapBPT usage examples
+## 🔍 What this repo is
 
-> **Note:** The actual *ShapBPT library* is hosted separately:  
-> https://github.com/amparore/shap_bpt
+This repository contains **all experiments, notebooks, and precomputed results** used in the ShapBPT paper, including:
+
+- Experiments **E1–E8** (ImageNet-S50, MS-COCO, CelebA, MVTec AD, and human study)
+- Jupyter notebooks for **quick reproduction of main figures**
+- **Precomputed PDFs & CSVs** for tables and plots in the paper
+- Minimal examples of how to use **ShapBPT explanations** in practice
+
+> ⚠️ **Important:** This repo does **not** contain the ShapBPT library itself.  
+> The core implementation lives here:  
+> 🔗 https://github.com/amparore/shap_bpt
 
 ---
 
@@ -72,7 +75,9 @@ This repo provides:
 ```bash
 conda create -n env_shapbpt python==3.9.18
 conda activate env_shapbpt
+# Python deps
 pip install -r requirements.txt
+# PyTorch with CUDA (adjust for your system if needed)
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 ```
 
@@ -124,62 +129,49 @@ notebooks/datasets/
 | E5 | CelebAMask-HQ | https://github.com/switchablenorms/CelebAMask-HQ |
 | E6 | MVTec AD | https://www.mvtec.com/company/research/datasets/mvtec-ad |
 
+💡 You do not need all datasets to run the quick demo notebooks.
+Only download the ones for the experiments you want to reproduce.
+
 ---
 
-<!-- ## 🚀 2. Minimal Example (ShapBPT)
+## 🧩 2. Minimal ShapBPT Example
 
 ```python
 import shap_bpt
 
 explainer = shap_bpt.Explainer(
-    f_masked,                   # black box model
-    image_to_explain, 
+    f_masked,            # your black-box model f(x ⊙ m)
+    image_to_explain,    # H×W×C numpy array or tensor (see shap_bpt docs)
     num_explained_classes=4,
     verbose=True
 )
+
 MAX_EVALS_BUDGET = 1000
+
+# BPT partitioning
 shap_values_bpt = explainer.explain_instance(
-    MAX_EVALS_BUDGET,           # budget for explanation
-    method="BPT",               # partioning method
-    batch_size=4,               # bacth size
-    # max_weight=None   
+    MAX_EVALS_BUDGET,
+    method="BPT",        # data-aware binary partition tree
+    batch_size=4,
 )
 
+# Axis-aligned baseline
 shap_values_aa = explainer.explain_instance(
     MAX_EVALS_BUDGET,
     method="AA",
     verbose_plot=False,
     batch_size=4,
-    # max_weight=None
 )
 
-# shap_bpt.plot_owen_values(
-#     explainer,
-#     [shap_values_aa, shap_values_bpt],
-#     class_names,
-#     names=["AxisAligned", "BPT"]
-# )
+# Plot attributions
+shap_bpt.plot_owen_values(explainer, shap_values_aa, class_names)
+shap_bpt.plot_owen_values(explainer, shap_values_bpt, class_names)
 
 ```
-
-```python
-# PLOT FEATURE ATTRIBUTION -->
-<!-- shap_bpt.plot_owen_values(explainer, shap_values_aa, class_names)
-```
-
-
-<center><img src="docs/aa_plot.svg"></center>
-
-```python
-# PLOT FEATURE ATTRIBUTION -->
-<!-- shap_bpt.plot_owen_values(explainer, shap_values_bpt, class_names) -->
-<!-- ``` -->
-<!-- <center><img src="docs/bpt_plot.svg"></center> -->
- <!-- -->
 
 ---
 
-## 📊 2. Precomputed Results
+## 📊 3. Precomputed Results
 
 | Exp | Dataset | Model | PDF | CSV |
 |:---:|:--------|:------|:-----|:-----|
@@ -193,9 +185,9 @@ shap_values_aa = explainer.explain_instance(
 ---
 
 
-## 3. Figure-to-Notebook Mapping
+## 4. Figure-to-Notebook Mapping
 
-### ✅ 3.1 Main Paper
+### ✅ 4.1 Main Paper
 
 | Paper Figure | What it Shows                           | Notebook Path                                     |
 | ------------ | --------------------------------------- | ------------------------------------------------- |
@@ -205,7 +197,7 @@ shap_values_aa = explainer.explain_instance(
 | **Fig. 4**   | IoU comparison (AA vs BPT)              | [/notebooks/E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb](//notebooks/E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb) |
 | **Fig. 5**   | Quantitative Analysis           | [/notebooks/N2_summary_plots.ipynb](//notebooks/N2_summary_plots.ipynb)                    |
 ---
-### ✅ 3.2 Technical Appendix ([available here](https://zenodo.org/records/17570695))
+### ✅ 4.2 Technical Appendix ([available here](https://zenodo.org/records/17570695))
 ---
 | Paper Figure | What it Shows                           | Notebook Path                                     |
 | ------------ | --------------------------------------- | ------------------------------------------------- |
@@ -224,9 +216,9 @@ shap_values_aa = explainer.explain_instance(
 | **Table 2**   | Annova Analysis   | [notebooks/N2_summary_plots.ipynb](/notebooks/N2_summary_plots.ipynb)                   |
 
 
-## 🔁 4. Reproduce Paper Results
+## 🔁 5. Reproduce Paper Results
 
-### 4.1 Quick (few minutes)
+### 5.1 Quick (few minutes)
 
 - Run:
 
@@ -242,7 +234,7 @@ notebooks/E1_E2_E3_E7/N2_DrawPlotFig4_Fig6_from_CSV.ipynb
 
 ---
 
-### 4.2 Full replication (long)
+### 5.2 Full replication (long)
 
 Run:
 
@@ -301,10 +293,37 @@ Runtimes (approx):
 ### Keywords 🔍
 Explainable AI · XAI · Computer Vision · Object Localization
 
-## Acknowledgments
-- This work has received funding from the European Union’s Horizon research and innovation program Chips JU under Grant Agreement No. 101139769, [**_DistriMuSe project_**](https://distrimuse.eu/) (HORIZON-KDT-JU-2023-2-RIA). The JU receives support from the European Union’s Horizon research and innovation programme and the nations involved in the mentioned projects.
-- Thanks to model architecture and pretrained weights providers including [**_SwinViT by Microsoft_**](https://github.com/microsoft/Swin-Transformer), [**_ViT by PyTorch_**](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.vit_b_16.html?highlight=vit+b), & [**_Facial Recognition model & weights by Kartik Batra_**](https://www.kaggle.com/code/kartikbatra/multilabelclassification/notebook), [**_VAE-GAN model & weights_**](https://github.com/rashidrao-pk/anomaly_detection_trust_case_study), and [**_Yolo model by Ultralytics_**](https://docs.ultralytics.com/models/yolov11/).
-- Thanks to dataset providers including [**_ImageNet_**](https://www.image-net.org), [**_ImageNet-S<sub>50</sub>_**](https://github.com/LUSSeg/ImageNet-S), [**_CelebA-HQ_**](https://github.com/switchablenorms/CelebAMask-HQ), [**_MVtec_**](https://www.mvtec.com/company/research/datasets/mvtec-ad), and [**_MS-COCO_**](https://cocodataset.org).
+## 🙏 Acknowledgments
+
+We gratefully acknowledge the following contributions and resources that supported this work:
+
+### 💠 Funding
+This work received funding from the European Union’s Horizon research and innovation programme **Chips JU** under Grant Agreement No. **101139769**, as part of the [**DistriMuSe Project**](https://distrimuse.eu/) (HORIZON-KDT-JU-2023-2-RIA).  
+The Joint Undertaking receives support from the European Union and the participating member states.
+
+### 🧠 Models & Pretrained Weights
+We thank the developers of the model architectures and pretrained weights used in our experiments, including:
+
+- [**Swin Transformer (Microsoft)**](https://github.com/microsoft/Swin-Transformer)  
+- [**Vision Transformer (PyTorch)**](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.vit_b_16.html?highlight=vit+b)  
+- [**Facial attribute CNN by Kartik Batra**](https://www.kaggle.com/code/kartikbatra/multilabelclassification/notebook)  
+- [**VAE-GAN model & weights**](https://github.com/rashidrao-pk/anomaly_detection_trust_case_study)  
+- [**YOLO Models by Ultralytics**](https://docs.ultralytics.com/models/yolov11/)
+
+### 🗄️ Datasets
+We acknowledge the dataset curators whose work made this project possible:
+
+- [**ImageNet**](https://www.image-net.org)  
+- [**ImageNet-S<sub>50</sub>**](https://github.com/LUSSeg/ImageNet-S)  
+- [**CelebA-HQ**](https://github.com/switchablenorms/CelebAMask-HQ)  
+- [**MVTec AD**](https://www.mvtec.com/company/research/datasets/mvtec-ad)  
+- [**MS-COCO**](https://cocodataset.org)
+
+### 📘 Related Work Inspiration
+Some notebook design ideas were inspired by the excellent documentation and examples in **Shap-IQ**:  
+🔗 https://shapiq.readthedocs.io/en/latest/index.html  
+We appreciate their contributions to interpretable machine learning research.
+
 
 
 ## Contributors
