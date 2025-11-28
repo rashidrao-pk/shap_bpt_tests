@@ -1,14 +1,8 @@
-<!-- Logo + Title -->
-<p align="center">
-  <img src="docs/imgs/logo_shapbpt.png" alt="ShapBPT logo" width="150">
-</p>
-
-<h1 align="center">ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees</h1>
+# ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees <img src="docs/imgs/logo_shapbpt.png" alt="ShapBPT logo" align="right" width="150">
 
 <p align="center">
   <b>AAAI-2026 (40th AAAI Conference on Artificial Intelligence), Singapore</b><br>
 </p>
-
 
 <img src="https://img.shields.io/badge/version-v0.0.0-rc0" alt="Version">
       <a href ="https://github.com/rashidrao-pk/shap_bpt_tests/blob/main/LICENSE">
@@ -19,13 +13,7 @@
       <a href="https://github.com/rashidrao-pk/">
         <img src="https://img.shields.io/github/commit-activity/t/rashidrao-pk/shap_bpt_tests" alt="GitHub commit activity (branch)">
       </a>
-<!-- <a href="https://github.com/rashidrao-pk/shap_bpt_tests/issues?q=is%3Aissue+is%3Aclosed">
-<img src="https://img.shields.io/github/issues-closed/rashidrao-pk/shap_bpt_tests" alt="GitHub closed issues">
-</a> -->
 <img src="https://img.shields.io/github/last-commit/rashidrao-pk/shap_bpt_tests" alt="GitHub last commit">
-<!-- <a href="https://github.com/rashidrao-pk/shap_bpt_tests/watchers">
-<img src="https://img.shields.io/github/watchers/rashidrao-pk/shap_bpt_tests?style=flat" alt="GitHub watchers">
-</a> -->
 <a href="https://github.com/rashidrao-pk/shap_bpt_tests/forks">
 <img src="https://img.shields.io/github/forks/rashidrao-pk/shap_bpt_tests?style=flat" alt="GitHub forks">
 </a>
@@ -34,16 +22,15 @@
 </a>
 <img src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Frashidrao-pk&label=Visitors&countColor=%23263759&style=flat" alt="Visitors">
 
-
 ## 🎉 ShapBPT Experiments — v1.0 ([AAAI-26](https://aaai.org/conference/aaai/aaai-26/) Paper Release)
 
 ## Availability
 ShapBPT Package: 
 Technical Appendix: 
 
-- Code — https://github.com/amparore/shap_bpt
-- Tests — https://github.com/rashidrao-pk/shap_bpt_tests
-- Tech. Appendix — https://zenodo.org/records/17570695
+- Code — **_https://github.com/amparore/shap_bpt_**
+- Tests — **_https://github.com/rashidrao-pk/shap_bpt_tests_**
+- Tech. Appendix — **_https://zenodo.org/records/17570695_**
 
 ---
 ## 🔍 Overview
@@ -213,28 +200,29 @@ shap_values_aa = explainer.explain_instance(
 
 | Paper Figure | What it Shows                           | Notebook Path                                     |
 | ------------ | --------------------------------------- | ------------------------------------------------- |
-| **Fig. 1**   | Overview + comparison example           | `notebooks/N1_Fig1_and_Fig3.ipynb`                |
+| **Fig. 1**   | Overview + comparison example           | [notebooks/N1_Fig1_and_Fig3.ipynb](/notebooks/N1_Fig1_and_Fig3.ipynb)                 |
 | **Fig. 2**   | BPT partitioning visualization          | *Generated from core library demos*               |
-| **Fig. 3**   | Qualitative examples (ResNet/Swin/ViT)  | `notebooks/N1_Fig1_and_Fig3.ipynb`                |
-| **Fig. 4**   | IoU comparison (AA vs BPT)              | `E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb` |
-| **Fig. 5**   | Quantitative Analysis           | `notebook/N2_summary_plots.ipynb`                    |
+| **Fig. 3**   | Qualitative examples (ResNet/Swin/ViT)  | [notebooks/N1_Fig1_and_Fig3.ipynb](/notebooks/N1_Fig1_and_Fig3.ipynb)                 |
+| **Fig. 4**   | IoU comparison (AA vs BPT)              | [notebook/E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb](/notebook/E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb) |
+| **Fig. 5**   | Quantitative Analysis           | [notebook/N2_summary_plots.ipynb](/notebook/N2_summary_plots.ipynb)                    |
 ---
 ### ✅ 3.2 Technical Appendix ([available here](https://zenodo.org/records/17570695))
 ---
 | Paper Figure | What it Shows                           | Notebook Path                                     |
 | ------------ | --------------------------------------- | ------------------------------------------------- |
-| **Fig. 6,Fig. 9,Fig. 10, & Fig. 19**   | Extended heatmaps for Exp E1,E2,E2 & E7                    | `notebook/E1_E2_E3_E7/N1_1_Run_experiments_testing.ipynb` |
-| **Fig. 7,Fig.8, Fig.11  & Fig. 20**   | Results on all images for Exp E1,E2,E2 & E7 | `notebook/E1_E2_E3_E7/N2_1_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb`                       |
-| **Fig. 12**   | Extended heatmaps for Exp. E4 (Object Detection on MS COCO) | `E4_MS_COCO/N1_MS_COCO_testing.ipynb.ipynb`                       |
-| **Fig. 13**   | Results on all images | `E4_MS_COCO/N2_DrawPlot_from_CSV.ipynb`                       |
-| **Fig. 14**   | Extended heatmaps for Exp. E5 (Facial Attributes Recongnition on  CelebA dataset) | `E5_CelebA/N1_Run_experiments_CelebA.ipynb`                       |
-| **Fig. 15**   | Results for Exp. E5 (Facial Attributes Recongnition on  CelebA dataset) | `E5_CelebA/N2_DrawPlot_from_CSV.ipynb`                       |
+| **Fig. 6,Fig. 9,Fig. 10, & Fig. 19**   | Extended heatmaps for Exp E1,E2,E2 & E7                    | [notebook/E1_E2_E3_E7/N1_1_Run_experiments_testing.ipynb](/notebook/E1_E2_E3_E7/N1_1_Run_experiments_testing.ipynb) |
+| **Fig. 7,Fig.8, Fig.11  & Fig. 20**   | Results on all images for Exp E1,E2,E2 & E7 | [notebook/E1_E2_E3_E7/N2_1_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb](/notebook/E1_E2_E3_E7/N2_1_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb)                       |
+| **Fig. 12**   | Extended heatmaps for Exp. E4 (Object Detection on MS COCO) | [notebook/E4_MS_COCO/N1_MS_COCO_testing.ipynb.ipynb](/notebooks/E4_MS_COCO/N1_MS_COCO_testing.ipynb.ipynb)                       |
+| **Fig. 13**   | Results on all images | [E4_MS_COCO/N2_DrawPlot_from_CSV.ipynb](/notebooks/E4_MS_COCO/N2_DrawPlot_from_CSV.ipynb)                       |
+| **Fig. 14**   | Extended heatmaps for Exp. E5 (Facial Attributes Recongnition on  CelebA dataset) | [notebook/E5_CelebA/N1_Run_experiments_CelebA.ipynb](/notebooks/E5_CelebA/N1_Run_experiments_CelebA.ipynb)                       |
+| **Fig. 15**   | Results for Exp. E5 (Facial Attributes Recongnition on  CelebA dataset) | [notebook/E5_CelebA/N2_DrawPlot_from_CSV.ipynb](/notebooks/E5_CelebA/N2_DrawPlot_from_CSV.ipynb)                       |
 | **Fig. 16**   | Framework for Anomaly Detection | using drawing tool                       |
-| **Fig. 17**   | Extended heatmaps Anomaly detection explanations (using VAE-GAN on MVTec dataset)  | `E6_XAD/N1_XAD_HAZELNUT.ipynb`                       |
-| **Fig. 18**   | Results on all images  | `E6_XAD/N2_DrawPlot_from_CSV.ipynb`                       |
+| **Fig. 17**   | Extended heatmaps Anomaly detection explanations (using VAE-GAN on MVTec dataset)  | [notebook/E6_XAD/N1_XAD_HAZELNUT.ipynb](/notebooks/E6_XAD/N1_XAD_HAZELNUT.ipynb)                       |
+| **Fig. 18**   | Results on all images  | [notebook/E6_XAD/N2_DrawPlot_from_CSV.ipynb](/notebooks/E6_XAD/N2_DrawPlot_from_CSV.ipynb)                       |
 | **Fig. 21**   | Human study — Explanations  | -                   |
-| **Fig. 22**   | Human study — ranking of explanations   | `E8_human_study/HumanStudyResults.ipynb`                   |
-| **Table 2**   | Annova Analysis   | `notebooks/N2_summary_plots.ipynb`                   |
+| **Fig. 22**   | Human study — ranking of explanations   | [notebook/E8_human_study/HumanStudyResults.ipynb](/notebooks/E8_human_study/HumanStudyResults.ipynb)                   |
+| **Fig. 23**   | Results for Convergence Test | [notebook/E1_E2_E3_E7/N2_2_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb](/notebooks/E1_E2_E3_E7/N2_2_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb)                       |
+| **Table 2**   | Annova Analysis   | [notebooks/N2_summary_plots.ipynb](/notebooks/N2_summary_plots.ipynb)                   |
 
 
 ## 🔁 4. Reproduce Paper Results
@@ -310,35 +298,14 @@ Runtimes (approx):
 └── README.md
 ```
 
-<!-- ### Authors ✍️
-
-| Sr. No. | Author Name | Affiliation | Google Scholar | 
-| :--:    | :--:        | :--:        | :--:           | 
-| 1. | Muhammad Rashid | University of Torino, Computer Science Department, C.so Svizzera 185, 10149 Torino, Italy | [Muhammad Rashid](https://scholar.google.com/citations?user=F5u_Z5MAAAAJ&hl=en) | 
-| 2. | Elvio G. Amparore | University of Torino, Computer Science Department, C.so Svizzera 185, 10149 Torino, Italy | [Elvio G. Amparore](https://scholar.google.com/citations?user=Hivlp1kAAAAJ&hl=en&oi=ao) | 
-| 3. | Enrico Ferrari | Rulex Innovation Labs, Rulex Inc., Via Felice Romani 9, 16122 Genova, Italy | [Enrico Ferrari](https://scholar.google.com/citations?user=QOflGNIAAAAJ&hl=en&oi=ao) | 
-| 4. | Damiano Verda | Rulex Innovation Labs, Rulex Inc., Via Felice Romani 9, 16122 Genova, Italy | [Damiano Verda](https://scholar.google.com/citations?user=t6o9YSsAAAAJ&hl=en&oi=ao) | -->
-
-
 ---
-
-<!-- ## 📑 Citation
-
-```
-@inproceedings{Rashid2026ShapBPT,
-  title={ShapBPT: Image Feature Attributions using Data-Aware Binary Partition Trees},
-  author={Muhammad Rashid and Elvio G. Amparore and others},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2026}
-}
-``` -->
 ### Keywords 🔍
 Explainable AI · XAI · Computer Vision · Object Localization
 
 ## Acknowledgments
-- This work has received funding from the European Union’s Horizon research and innovation program Chips JU under Grant Agreement No. 101139769, **_DistriMuSe project_** (HORIZON-KDT-JU-2023-2-RIA). The JU receives support from the European Union’s Horizon research and innovation programme and the nations involved in the mentioned projects. The work reflects only the authors’ views; the European Commission is not responsible for any use that maybe made of the information it contains.
-- Thanks to model architecture and pretrained weights providers including [SwinViT](https://github.com/microsoft/Swin-Transformer), [ViT](), & [Facial Recognition]() [VAE-GAN model]()
-- Thanks to dataset providers including [ImageNet](), [MVTec](), [MS-COCO](), and [Celeb-A-HQ]()
+- This work has received funding from the European Union’s Horizon research and innovation program Chips JU under Grant Agreement No. 101139769, [**_DistriMuSe project_**](https://distrimuse.eu/) (HORIZON-KDT-JU-2023-2-RIA). The JU receives support from the European Union’s Horizon research and innovation programme and the nations involved in the mentioned projects.
+- Thanks to model architecture and pretrained weights providers including [**_SwinViT by Microsoft_**](https://github.com/microsoft/Swin-Transformer), [**_ViT by PyTorch_**](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.vit_b_16.html?highlight=vit+b), & [**_Facial Recognition model & weights by Kartik Batra_**](https://www.kaggle.com/code/kartikbatra/multilabelclassification/notebook), [**_VAE-GAN model & weights_**](https://github.com/rashidrao-pk/anomaly_detection_trust_case_study), and [**_Yolo model by Ultralytics_**](https://docs.ultralytics.com/models/yolov11/).
+- Thanks to dataset providers including [**_ImageNet_**](https://www.image-net.org), [**_ImageNet-S<sub>50</sub>_**](https://github.com/LUSSeg/ImageNet-S), [**_CelebA-HQ_**](https://github.com/switchablenorms/CelebAMask-HQ), [**_MVtec_**](https://www.mvtec.com/company/research/datasets/mvtec-ad), and [**_MS-COCO_**](https://cocodataset.org).
 
 
 ## Contributors
