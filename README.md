@@ -183,14 +183,13 @@ shap_values_aa = explainer.explain_instance(
 
 | Exp | Dataset | Model | PDF | CSV |
 |:---:|:--------|:------|:-----|:-----|
-| E1 | ImageNet-S50 | ResNet50 | `PDF/HTML_E1_real_resnet_gray_combined.pdf` | `csv_exp_E1_ImageNet_resnet_real_gray_logits.csv` |
-| E2 | ImageNet-S50 | Ideal | `PDF/HTML_E2_ideal_resnet_gray_combined.pdf` | `csv_exp_E2_ImageNet_resnet_ideal_gray_logits.csv` |
-| E3 | ImageNet-S50 | SwinViT | `PDF/HTML_E3_real_swin_trans_vit_gray_combined.pdf` | `csv_exp_E3_ImageNet_swin_trans_vit_real_gray_logits.csv` |
-| E4 | MS-COCO | YOLO11s | `PDF/HTML_E4_yolo11s_gray_Combined.pdf` | `csv_exp_E4_yolo11s_gray_9.csv` |
-| E5 | CelebA | CNN | `PDF/HTML_E5_CelebA_gray_combined.pdf` | `csv_exp_E5_IoU_face_1000_14_gray_brownhairs.csv` |
-| E6 | MVTec | VAE-GAN | `PDF/HTML_E6_hazelnut_heatmaps_IoU.pdf` | `csv_exp_E6_testresults_hazelnut_9_BPT_new_eval.csv` |
-| E7 | ImageNet-S50 | ViT-Base16 | `PDF/HTML_E7_ViT__combined_100.pdf` | `csv_exp_E7_ImageNet_vit_real_gray_logits.csv` |
-
+| E1 | ImageNet-S50 | ResNet50 | [_PDF/HTML_E1_real_resnet_gray_combined.pdf_](/PDF/HTML_E1_real_resnet_gray_combined.pdf) | _csv_exp_E1_ImageNet_resnet_real_gray_logits.csv_ |
+| E2 | ImageNet-S50 | Ideal | [_PDF/HTML_E2_ideal_resnet_gray_combined.pdf_](/PDF/HTML_E2_ideal_resnet_gray_combined.pdf) | _csv_exp_E2_ImageNet_resnet_ideal_gray_logits.csv_ |
+| E3 | ImageNet-S50 | SwinViT | [_PDF/HTML_E3_real_swin_trans_vit_gray_combined.pdf_](/PDF/HTML_E3_real_swin_trans_vit_gray_combined.pdf) | _csv_exp_E3_ImageNet_swin_trans_vit_real_gray_logits.csv_ |
+| E4 | MS-COCO | YOLO11s | [_PDF/HTML_E4_yolo11s_gray_Combined.pdf_](/PDF/HTML_E4_yolo11s_gray_Combined.pdf) | _csv_exp_E4_yolo11s_gray_9.csv_ |
+| E5 | CelebA | CNN | [_PDF/HTML_E5_CelebA_gray_combined.pdf_](/PDF/HTML_E5_CelebA_gray_combined.pdf) | _csv_exp_E5_IoU_face_1000_14_gray_brownhairs.csv_ |
+| E6 | MVTec | VAE-GAN | [_PDF/HTML_E6_hazelnut_heatmaps_IoU.pdf_](/PDF/HTML_E6_hazelnut_heatmaps_IoU.pdf) | _csv_exp_E6_testresults_hazelnut_9_BPT_new_eval.csv_ |
+| E7 | ImageNet-S50 | ViT-Base16 | [_PDF/HTML_E7_ViT__combined_100.pdf_](/PDF/HTML_E7_ViT__combined_100.pdf) | _csv_exp_E7_ImageNet_vit_real_gray_logits.csv_ |
 ---
 
 
@@ -203,25 +202,25 @@ shap_values_aa = explainer.explain_instance(
 | **Fig. 1**   | Overview + comparison example           | [notebooks/N1_Fig1_and_Fig3.ipynb](/notebooks/N1_Fig1_and_Fig3.ipynb)                 |
 | **Fig. 2**   | BPT partitioning visualization          | *Generated from core library demos*               |
 | **Fig. 3**   | Qualitative examples (ResNet/Swin/ViT)  | [notebooks/N1_Fig1_and_Fig3.ipynb](/notebooks/N1_Fig1_and_Fig3.ipynb)                 |
-| **Fig. 4**   | IoU comparison (AA vs BPT)              | [notebook/E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb](/notebook/E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb) |
-| **Fig. 5**   | Quantitative Analysis           | [notebook/N2_summary_plots.ipynb](/notebook/N2_summary_plots.ipynb)                    |
+| **Fig. 4**   | IoU comparison (AA vs BPT)              | [/notebooks/E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb](//notebooks/E1_E2_E3_E7/N1_DrawPlotFig4_Fig6_from_CSV.ipynb) |
+| **Fig. 5**   | Quantitative Analysis           | [/notebooks/N2_summary_plots.ipynb](//notebooks/N2_summary_plots.ipynb)                    |
 ---
 ### ✅ 3.2 Technical Appendix ([available here](https://zenodo.org/records/17570695))
 ---
 | Paper Figure | What it Shows                           | Notebook Path                                     |
 | ------------ | --------------------------------------- | ------------------------------------------------- |
-| **Fig. 6,Fig. 9,Fig. 10, & Fig. 19**   | Extended heatmaps for Exp E1,E2,E2 & E7                    | [notebook/E1_E2_E3_E7/N1_1_Run_experiments_testing.ipynb](/notebook/E1_E2_E3_E7/N1_1_Run_experiments_testing.ipynb) |
-| **Fig. 7,Fig.8, Fig.11  & Fig. 20**   | Results on all images for Exp E1,E2,E2 & E7 | [notebook/E1_E2_E3_E7/N2_1_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb](/notebook/E1_E2_E3_E7/N2_1_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb)                       |
-| **Fig. 12**   | Extended heatmaps for Exp. E4 (Object Detection on MS COCO) | [notebook/E4_MS_COCO/N1_MS_COCO_testing.ipynb.ipynb](/notebooks/E4_MS_COCO/N1_MS_COCO_testing.ipynb.ipynb)                       |
+| **Fig. 6,Fig. 9,Fig. 10, & Fig. 19**   | Extended heatmaps for Exp E1,E2,E2 & E7                    | [/notebooks/E1_E2_E3_E7/N1_1_Run_experiments_testing.ipynb](//notebooks/E1_E2_E3_E7/N1_1_Run_experiments_testing.ipynb) |
+| **Fig. 7,Fig.8, Fig.11  & Fig. 20**   | Results on all images for Exp E1,E2,E2 & E7 | [/notebooks/E1_E2_E3_E7/N2_1_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb](//notebooks/E1_E2_E3_E7/N2_1_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb)                       |
+| **Fig. 12**   | Extended heatmaps for Exp. E4 (Object Detection on MS COCO) | [/notebooks/E4_MS_COCO/N1_MS_COCO_testing.ipynb.ipynb](/notebooks/E4_MS_COCO/N1_MS_COCO_testing.ipynb.ipynb)                       |
 | **Fig. 13**   | Results on all images | [E4_MS_COCO/N2_DrawPlot_from_CSV.ipynb](/notebooks/E4_MS_COCO/N2_DrawPlot_from_CSV.ipynb)                       |
-| **Fig. 14**   | Extended heatmaps for Exp. E5 (Facial Attributes Recongnition on  CelebA dataset) | [notebook/E5_CelebA/N1_Run_experiments_CelebA.ipynb](/notebooks/E5_CelebA/N1_Run_experiments_CelebA.ipynb)                       |
-| **Fig. 15**   | Results for Exp. E5 (Facial Attributes Recongnition on  CelebA dataset) | [notebook/E5_CelebA/N2_DrawPlot_from_CSV.ipynb](/notebooks/E5_CelebA/N2_DrawPlot_from_CSV.ipynb)                       |
+| **Fig. 14**   | Extended heatmaps for Exp. E5 (Facial Attributes Recongnition on  CelebA dataset) | [/notebooks/E5_CelebA/N1_Run_experiments_CelebA.ipynb](/notebooks/E5_CelebA/N1_Run_experiments_CelebA.ipynb)                       |
+| **Fig. 15**   | Results for Exp. E5 (Facial Attributes Recongnition on  CelebA dataset) | [/notebooks/E5_CelebA/N2_DrawPlot_from_CSV.ipynb](/notebooks/E5_CelebA/N2_DrawPlot_from_CSV.ipynb)                       |
 | **Fig. 16**   | Framework for Anomaly Detection | using drawing tool                       |
-| **Fig. 17**   | Extended heatmaps Anomaly detection explanations (using VAE-GAN on MVTec dataset)  | [notebook/E6_XAD/N1_XAD_HAZELNUT.ipynb](/notebooks/E6_XAD/N1_XAD_HAZELNUT.ipynb)                       |
-| **Fig. 18**   | Results on all images  | [notebook/E6_XAD/N2_DrawPlot_from_CSV.ipynb](/notebooks/E6_XAD/N2_DrawPlot_from_CSV.ipynb)                       |
+| **Fig. 17**   | Extended heatmaps Anomaly detection explanations (using VAE-GAN on MVTec dataset)  | [/notebooks/E6_XAD/N1_XAD_HAZELNUT.ipynb](/notebooks/E6_XAD/N1_XAD_HAZELNUT.ipynb)                       |
+| **Fig. 18**   | Results on all images  | [/notebooks/E6_XAD/N2_DrawPlot_from_CSV.ipynb](/notebooks/E6_XAD/N2_DrawPlot_from_CSV.ipynb)                       |
 | **Fig. 21**   | Human study — Explanations  | -                   |
-| **Fig. 22**   | Human study — ranking of explanations   | [notebook/E8_human_study/HumanStudyResults.ipynb](/notebooks/E8_human_study/HumanStudyResults.ipynb)                   |
-| **Fig. 23**   | Results for Convergence Test | [notebook/E1_E2_E3_E7/N2_2_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb](/notebooks/E1_E2_E3_E7/N2_2_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb)                       |
+| **Fig. 22**   | Human study — ranking of explanations   | [/notebooks/E8_human_study/HumanStudyResults.ipynb](/notebooks/E8_human_study/HumanStudyResults.ipynb)                   |
+| **Fig. 23**   | Results for Convergence Test | [/notebooks/E1_E2_E3_E7/N2_2_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb](/notebooks/E1_E2_E3_E7/N2_2_DrawPlot_Fig5_Fig6_Fig7_from_CSV.ipynb)                       |
 | **Table 2**   | Annova Analysis   | [notebooks/N2_summary_plots.ipynb](/notebooks/N2_summary_plots.ipynb)                   |
 
 
