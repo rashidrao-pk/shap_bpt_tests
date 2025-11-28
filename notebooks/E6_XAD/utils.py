@@ -644,3 +644,93 @@ def compare(data=None,input_type=None,save_plot=False,results_path=None,verbose=
                 results_path=results_path, verbose=False)
         compare(data=ds_a5,input_type='Anamolous_thread_top', save_plot=True,
                 results_path=results_path, verbose=False)    
+        
+
+
+def get_BlackBox_VAE_GAN(path_models, ds_name='hazelnut', num_epochs=30000,
+                         image_size=[128,128], latent_dim=32):
+    import pandas as pd
+    """
+    Loads a pretrained VAE-GAN model + history.
+    Returns:
+        model, history_frame
+    """
+
+    # reload your modules
+    # sys.path.append(path_models)
+    # import utils as ut
+    import models as mdl
+    
+    # importlib.reload(ut)
+    # importlib.reload(mdl)
+
+    # -------------------------------------------------------
+    # Build full paths
+    # -------------------------------------------------------
+    model_dir = os.path.abspath(f"{path_models}/{ds_name}_VAE_GAN_{num_epochs}")
+    prefix = os.path.join(model_dir, f"{ds_name}_VAE_GAN_{num_epochs}")
+    history_file = prefix + ".csv"
+
+    # -------------------------------------------------------
+    # builder + loader
+    # -------------------------------------------------------
+    def build_model(image_size, latent_dim=32):
+        encoder = mdl.Model_VAE_GAN_functions.get_encoder(
+            latent_dim=latent_dim, print_summary=False
+        )
+        decoder = mdl.Model_VAE_GAN_functions.get_decoder(
+            latent_dim=latent_dim, print_summary=False
+        )
+        discriminator = mdl.Model_VAE_GAN_functions.get_discriminator(
+            shape=image_size + [3], print_summary=False
+        )
+        vae = mdl.VAE(encoder, decoder)
+        return mdl.VAE_GAN(vae, discriminator)
+
+    def load_weights(model, prefix):
+        model.load_weights(prefix + "_model")
+        model.vae.load_weights(prefix + "_vae")
+        model.vae.encoder.load_weights(prefix + "_encoder")
+        model.vae.decoder.load_weights(prefix + "_decoder")
+        model.discriminator.load_weights(prefix + "_discriminator")
+        return model
+
+    # -------------------------------------------------------
+    # Build + compile model
+    # -------------------------------------------------------
+    model = build_model(image_size, latent_dim)
+    model.compile(optimizer=tf.keras.optimizers.Adam())
+
+    # -------------------------------------------------------
+    # Load weights + history
+    # -------------------------------------------------------
+    if os.path.exists(history_file):
+        model = load_weights(model, prefix)
+        history_frame = pd.read_csv(history_file)
+        print(f"Loaded model: {prefix}")
+        print(f"Epochs trained: {len(history_frame)}")
+    else:
+        print(f"Model NOT found: {history_file}")
+        history_frame = None
+
+    return model, history_frame
+
+def verify_model_path(base_ = os.getcwd()):
+    path_current = os.path.abspath(base_)
+    if path_current.split('\\')[-1]=='E6_XAD':
+        print(path_current)
+        path_models = os.path.join(path_current,'models')
+        if os.path.exists(path_models):
+            path_models_VAE = os.path.join(path_models,'hazelnut_VAE_GAN_30000')
+            if os.path.exists(path_models_VAE):
+                print(f'Model Found ::::::: {path_models_VAE}')
+            else:
+                print(f'------ Model NOT FOUND  ------ hazelnut_VAE_GAN_30000')
+        else:
+            print(f'------ Model Folder NOT FOUND  ------ {path_models}')
+    else:
+        print(f'------ Current Path is NOT E6_XAD  ------ {path_current}')
+    return path_models
+
+
+### 

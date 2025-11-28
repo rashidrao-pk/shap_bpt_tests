@@ -310,14 +310,14 @@ Runtimes (approx):
 └── README.md
 ```
 
-### Authors ✍️
+<!-- ### Authors ✍️
 
 | Sr. No. | Author Name | Affiliation | Google Scholar | 
 | :--:    | :--:        | :--:        | :--:           | 
 | 1. | Muhammad Rashid | University of Torino, Computer Science Department, C.so Svizzera 185, 10149 Torino, Italy | [Muhammad Rashid](https://scholar.google.com/citations?user=F5u_Z5MAAAAJ&hl=en) | 
 | 2. | Elvio G. Amparore | University of Torino, Computer Science Department, C.so Svizzera 185, 10149 Torino, Italy | [Elvio G. Amparore](https://scholar.google.com/citations?user=Hivlp1kAAAAJ&hl=en&oi=ao) | 
 | 3. | Enrico Ferrari | Rulex Innovation Labs, Rulex Inc., Via Felice Romani 9, 16122 Genova, Italy | [Enrico Ferrari](https://scholar.google.com/citations?user=QOflGNIAAAAJ&hl=en&oi=ao) | 
-| 4. | Damiano Verda | Rulex Innovation Labs, Rulex Inc., Via Felice Romani 9, 16122 Genova, Italy | [Damiano Verda](https://scholar.google.com/citations?user=t6o9YSsAAAAJ&hl=en&oi=ao) |
+| 4. | Damiano Verda | Rulex Innovation Labs, Rulex Inc., Via Felice Romani 9, 16122 Genova, Italy | [Damiano Verda](https://scholar.google.com/citations?user=t6o9YSsAAAAJ&hl=en&oi=ao) | -->
 
 
 ---
@@ -335,16 +335,13 @@ Runtimes (approx):
 ### Keywords 🔍
 Explainable AI · XAI · Computer Vision · Object Localization
 
-### Copyright Notice:
-MIT license
-Author: Muhammad Rashid (muhammad.rashid@unito.it)
-University of Turin, Italy.
+## Acknowledgments
+- This work has received funding from the European Union’s Horizon research and innovation program Chips JU under Grant Agreement No. 101139769, **_DistriMuSe project_** (HORIZON-KDT-JU-2023-2-RIA). The JU receives support from the European Union’s Horizon research and innovation programme and the nations involved in the mentioned projects. The work reflects only the authors’ views; the European Commission is not responsible for any use that maybe made of the information it contains.
+- Thanks to model architecture and pretrained weights providers including [SwinViT](https://github.com/microsoft/Swin-Transformer), [ViT](), & [Facial Recognition]() [VAE-GAN model]()
+- Thanks to dataset providers including [ImageNet](), [MVTec](), [MS-COCO](), and [Celeb-A-HQ]()
 
-## Funding
-This work has received funding from the European Union’s Horizon research and innovation program Chips JU under Grant Agreement No. 101139769, **_DistriMuSe project_** (HORIZON-KDT-JU-2023-2-RIA). The JU receives support from the European Union’s Horizon research and innovation programme and the nations involved in the mentioned projects. The work reflects only the authors’ views; the European Commission is not responsible for any use that maybe made of the information it contains.
 
 ## Contributors
-
 <a href="https://github.com/rashidrao-pk/shap_bpt_tests/graphs/contributors">
   <img src="http://contributors.nn.ci/api?repo=rashidrao-pk/shap_bpt_tests" alt="" />
 </a>
