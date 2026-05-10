@@ -19,21 +19,11 @@
 <a href="https://pypi.org/project/shap-bpt/"><img src="https://img.shields.io/pypi/v/shap-bpt" alt="PyPI Version"></a>
 <a href="https://pypi.org/project/shap-bpt/"><img src="https://img.shields.io/pypi/dm/shap-bpt" alt="PyPI Downloads"></a>
 <a href="https://github.com/rashidrao-pk/shap_bpt_tests/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
-<img src="https://img.shields.io/badge/version-v1.0-orange" alt="Version">
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/stargazers"><img src="https://img.shields.io/github/stars/rashidrao-pk/shap_bpt_tests?style=flat" alt="GitHub stars"></a>
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/forks"><img src="https://img.shields.io/github/forks/rashidrao-pk/shap_bpt_tests?style=flat" alt="GitHub forks"></a>
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/issues"><img src="https://img.shields.io/github/issues/rashidrao-pk/shap_bpt_tests" alt="GitHub issues"></a>
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed/rashidrao-pk/shap_bpt_tests" alt="GitHub closed issues"></a>
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/pulls"><img src="https://img.shields.io/github/issues-pr/rashidrao-pk/shap_bpt_tests" alt="GitHub pull requests"></a>
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/pulls?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed/rashidrao-pk/shap_bpt_tests" alt="GitHub closed pull requests"></a>
 <a href="https://github.com/rashidrao-pk/shap_bpt_tests/graphs/contributors"><img src="https://img.shields.io/github/contributors/rashidrao-pk/shap_bpt_tests" alt="GitHub contributors"></a>
 <a href="https://github.com/rashidrao-pk/shap_bpt_tests"><img src="https://img.shields.io/github/repo-size/rashidrao-pk/shap_bpt_tests" alt="GitHub repo size"></a>
 <a href="https://github.com/rashidrao-pk/shap_bpt_tests/commits/main"><img src="https://img.shields.io/github/commit-activity/t/rashidrao-pk/shap_bpt_tests" alt="GitHub commit activity"></a>
 <a href="https://github.com/rashidrao-pk/shap_bpt_tests/commits/main"><img src="https://img.shields.io/github/last-commit/rashidrao-pk/shap_bpt_tests" alt="GitHub last commit"></a>
 <img src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Frashidrao-pk%2Fshap_bpt_tests&label=Visitors&countColor=%23263759&style=flat" alt="Visitors"> 
- <a href="https://pypi.org/project/shap-bpt/">
-   <img src="https://img.shields.io/pypi/dm/shap-bpt" alt="PyPI Downloads">
- </a>
 </p>
 
 ---
@@ -59,6 +49,21 @@ The repository includes:
 > The official ShapBPT Python package is available here:
 >
 > https://github.com/amparore/shap_bpt
+
+## 📚 New to ShapBPT or Explainable AI?
+
+If you are new to **Explainable AI (XAI)** or want to learn how **ShapBPT** works in detail, including:
+
+- Installation and setup
+- Theory behind Shapley and Owen values
+- Binary Partition Trees (BPT)
+- API usage examples
+- Visualization utilities
+- Tutorials and notebooks
+
+please read the official documentation:
+
+🔗 https://shapbpt.readthedocs.io/en/latest/#
 
 ---
 
@@ -422,13 +427,6 @@ Some notebook design ideas were inspired by the excellent documentation and exam
 
 https://shapiq.readthedocs.io/en/latest/index.html
 
----
-
-## 👥 Contributors
-
-<a href="https://github.com/rashidrao-pk/shap_bpt_tests/graphs/contributors">
-  <img src="http://contributors.nn.ci/api?repo=rashidrao-pk/shap_bpt_tests" alt="Contributors" />
-</a>
 
 ---
 
